@@ -24,7 +24,7 @@ export const Formu = () => {
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <label for="name" class="">Nome</label>
-                                    <input type="text" id="name" name="name" class="form-control" />
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Nome em branco"/>
 
                                 </div>
                             </div>
@@ -32,7 +32,7 @@ export const Formu = () => {
                             <div class="col-md-6">
                                 <div class="md-form mb-0">
                                     <label for="email" class="">E-mail</label>
-                                    <input type="text" id="email" name="email" class="form-control" />
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail em branco"/>
 
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ export const Formu = () => {
                             <div class="col-md-12">
                                 <div class="md-form mb-0">
                                     <label for="subject" class="">Assunto</label>
-                                    <input type="text" id="subject" name="subject" class="form-control" />
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Assunto em branco"/>
 
                                 </div>
                             </div>
