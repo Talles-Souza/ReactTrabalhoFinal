@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 export const Topo = () => {
 
-
   let navigate = useNavigate();
 
   function handleClick() {
@@ -13,10 +12,9 @@ export const Topo = () => {
   return (<>
 
     <Navbar bg="light" expand="lg" >
-
-
+     
       <Container fluid>
-
+     
         <Navbar.Brand href="/home"><button type="button" class="btn btn-light">Tech Books</button></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

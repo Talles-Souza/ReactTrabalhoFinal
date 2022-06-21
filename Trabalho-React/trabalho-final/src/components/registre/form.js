@@ -15,7 +15,6 @@ export const Registro = () => {
   const [success, setSuccess] = useState(false);
   const [errors, setErrors] = useState([]);
 
-
   let navigate = useNavigate();
 
   const handleRegister = async (e) => {

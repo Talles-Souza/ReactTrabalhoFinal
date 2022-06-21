@@ -1,7 +1,6 @@
 import React from "react";
 import './styleFooter.css';
 
-
 export const Footer = () => {
 
     return (
@@ -24,5 +23,4 @@ export const Footer = () => {
             </footer>
         </>
     );
-
 }

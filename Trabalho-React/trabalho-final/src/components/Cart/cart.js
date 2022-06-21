@@ -2,12 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext, CartItensContext } from "../../context/CartItem";
 
-
-const ItemCart = (props) => {
+    const ItemCart = (props) => {
     const [quantidade, setQuantidade] = useState(1);
     const total = props.item.valorUnitarioProduto * quantidade;
+   
     return (
-
         <tr>
             <td class="p-4">
                 <div class="media align-items-center">
@@ -89,7 +88,6 @@ export const Cart = (props) => {
                         </table>
                     </div>
 
-
                     <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
                         <div class="mt-4">
 
@@ -109,9 +107,6 @@ export const Cart = (props) => {
                         <button type="button" class="btn btn-outline-danger" onClick={handleClick}>Voltar para a loja</button>
                         <button type="button" class="btn btn-outline-success">Finalizar pedido</button>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

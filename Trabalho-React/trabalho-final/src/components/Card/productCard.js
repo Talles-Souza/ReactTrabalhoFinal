@@ -3,7 +3,6 @@ import { Card, Button } from "react-bootstrap";
 import { useContext } from "react";
 import { CartContext, CartItensContext } from "../../context/CartItem";
 
-
 export const ProductCard = (props) => {
 
   const { cartItens} = useContext(CartItensContext)
@@ -25,7 +24,5 @@ export const ProductCard = (props) => {
           <Button variant="danger" onClick={() => addItemCart(props.produto)}>Adicionar ao carrinho</Button>
         </Card.Body>
       </Card>
-
-
     </>);
 }
