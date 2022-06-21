@@ -44,7 +44,7 @@ export const WrapperLogin = styled.div`
 display: flex;
 flex-wrap: wrap;
 width: 17rem;
-height: 20rem;
+height: 22rem;
 justify-content: center;
 position: relative;
 left: 5px;
