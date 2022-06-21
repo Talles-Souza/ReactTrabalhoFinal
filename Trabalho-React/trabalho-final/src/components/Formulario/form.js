@@ -34,7 +34,7 @@ export const Formu = () => {
             errors.subject = "Assunto em branco";
         }
         if(!values.message) {
-            errors.message = "Menssagem em branco";
+            errors.message = "Mensagem em branco";
         }
         return errors;
     };
