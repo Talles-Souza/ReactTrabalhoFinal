@@ -1,21 +1,63 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {useState, useEffect} from "react"
 
 export const Logar = () => {
+  const initialValues = {email: "", cpf: "" };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const regexcpf = /^\d{3}.\d{3}.\d{3}-\d{2}$/;
+    if (!values.email) {
+      errors.email = "Requer um e-mail";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Formato de e-mail ivalido";
+    }
+    if (!values.cpf) {
+      errors.cpf = "Requer CPF";
+    } else if (!regexcpf.test(values.cpf)) {
+      errors.cpf = "Formato de CPF inválido";
+    }
+    return errors;
+  };
+
   return (
     <>
-      <Form className="box">
+      <Form className="box" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Email" />
+          <Form.Control type="email" placeholder="Email" name='email' value={formValues.email} onChange={handleChange}/>
           <Form.Text className="text-muted">
           </Form.Text>
         </Form.Group>
-
+        <p style={{color: "red"}}>{formErrors.email}</p>
         <Form.Group className="mb-3" controlId="formBasicSsn">
           <Form.Label>CPF</Form.Label>
-          <Form.Control type="ssn" placeholder="CPF" />
+          <Form.Control type="ssn" placeholder="CPF" name='cpf' value={formValues.cpf} onChange={handleChange}/>
         </Form.Group>
+        <p style={{color: "red"}}>{formErrors.cpf}</p>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Lembrar" />
         </Form.Group>
