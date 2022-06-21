@@ -8,7 +8,6 @@ import { api } from "../../Service/api";
 
 export const Inicio = () => {
 
-
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [dataSourcePaginated, setDatasourcePaginated] = useState([]);
@@ -20,7 +19,6 @@ export const Inicio = () => {
     );
 
     const copyOfData = batchSlice?.map((i) => i);
-
     setDatasourcePaginated(copyOfData);
   };
   const paginate = (number) => {
@@ -33,17 +31,11 @@ export const Inicio = () => {
       const response = await api.get(`e-commerce/produto`)
       setTotalPages(response.data?.length || 0);
       setPage(1);
-
       mountDataSource(response.data, 1);
       setProdutos(response.data)
     }
     getProdutos();
   }, [])
-
-
-
-
-
 
   return (<>
     <Topo />
@@ -57,7 +49,6 @@ export const Inicio = () => {
             return (<ProductCard produto={produto} />)
           })}
 
-
         </Cont12>
         <nav aria-label="Navegação de página exemplo">
           <Paginacao
@@ -70,7 +61,6 @@ export const Inicio = () => {
           />
         </nav>
       </Cont1>
-
     </Body>
   </>);
 }

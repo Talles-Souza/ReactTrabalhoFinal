@@ -5,11 +5,7 @@ import { Card2, Cards, Card1, Card3, Wrapper, Inside, Container, Text1, Text2, B
 import { useNavigate } from "react-router-dom";
 import { api } from "../../Service/api";
 
-
 export const Pag1 = () => {
-
-  
-
 
   let navigate = useNavigate();
 
@@ -45,7 +41,6 @@ export const Pag1 = () => {
           </Card3>
         </Inside>
       </Cards>
-
     </>
   )
 }

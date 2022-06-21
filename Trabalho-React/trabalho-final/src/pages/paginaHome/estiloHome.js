@@ -39,36 +39,3 @@ width: 100%;
 export const Texto = styled.text`
 font-family:monospace
 `
-
-
-
-
-
-// export const Cont2 = styled.div`
-// display :flex;
-// justify-content: center;
-// justify-content:space-around;
-// flex-direction: column;
-// height: 100%;
-// width: 20rem;
-// margin-left:2rem;
-// background-color:#333;
-// `
-// export const Cont21 = styled.div`
-// display :flex;
-// justify-content: center;
-// flex-wrap: wrap;
-// height: 40%;
-// width: 80%;
-// margin: auto;
-// background-color:darkorange;
-// `
-// export const Cont22 = styled.div`
-// display :flex;
-// justify-content: center;
-// flex-wrap: wrap;
-// height: 30%;
-// width: 80%;
-// margin: auto;
-// background-color:darkorchid;
-// `

@@ -1,12 +1,9 @@
 import React, { createContext, useState } from 'react';
 
-
 const CartItensContext = createContext(null);
 const CartContext = createContext(null);
-
 const CartItensProvider = (props) => {
-    const [cartItens, setCartItens] = useState([]);
-
+const [cartItens, setCartItens] = useState([]);
 
     function addItem(produto) {
         console.log(produto, cartItens);
